@@ -67,8 +67,7 @@
 # print(my_vector.addition(test_vector))
 
 
-
-
+print((20 * 19) % 42 + 2)
 
 
 

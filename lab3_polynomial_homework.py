@@ -21,7 +21,7 @@ class Polynomial:
             # набор коэффициентов через запятую
             coefs = list(coefficients)
 
-        # убираем старшие нулевые коэффициенты (но оставляем хотя бы один)
+        # убираем старшие нулевые коэффициенты (но оставляем минимум один)
         while len(coefs) > 1 and coefs[-1] == 0:
             coefs.pop()
         self.coefficients = coefs or [0]
@@ -130,3 +130,5 @@ print(Polynomial({0:-3, 2:1, 5:4}))     # 4x^5 + x^2 - 3
 print(Polynomial([7, -2, 0, -1]))       # -x^3 - 2x + 7
 print(repr(Polynomial(1, 2, 3, 0, 0)))  # Polynomial [1, 2, 3]
 print(Polynomial(1, 2, 3)(1))           # 6
+poly = Polynomial(1, 2, 3)
+print(poly == None)
